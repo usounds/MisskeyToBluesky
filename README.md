@@ -12,3 +12,8 @@ Deno Deployを使用する想定です。<br>
 (c)MISSKEY_SECRET:適当なランダム文字列を登録<br>
 4.ProjectのSettingのGit Integrationでフォークしたプロジェクトのindex.tsにリンクする<br>
 5.MisskeyのWebhookに「https://DENOENVDOMAIN.deno.dev/post」、シークレットに3-(c)と同じ値、Webhookを実行するタイミングに「ノートを投稿した時」のみにチェックを入れ、保存
+
+
+# KnownIssue
+- Misskeyのジョブの都合か、投稿が５分後ぐらいに重複して投稿される場合がある
+- Misskeyの投稿本文がない場合にエラーになる
