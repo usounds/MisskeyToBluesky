@@ -1,5 +1,5 @@
 # MisskeyToBluesky
-MisskeyのWebhookからBlueskyに投稿をクロスポストします。<br>
+MisskeyのWebhookを使用して、Blueskyに投稿をクロスポストします。<br>
 Deno Deployを使用する想定です。<br>
 仕様上、Deno DeployのProjectのURLと、MisskeyのSecretの2つがセットで他人にバレるとBlueskyに自由に投稿できちゃいます。万が一バレた際は、ProjectのURLを変えて、MisskeyのSecretも別のものに変更してください。<br>
 
