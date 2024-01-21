@@ -17,5 +17,6 @@ Deno Deployを使用する想定です。<br>
 - デプロイを行うと、直前の投稿が重複して登録されることがある
 - Misskeyのノートの本文がない場合にエラーになる
 
-# デプロイ
+# Automatic DeployとManual Deployデプロイ
+- Deno DeployのAutomatic DeployはDeno DeployのProjectが公開されるので、公開を希望されない方はManual Deployを使用してください
 - GitHub Actionのマニュアルデプロイを行う際は、DENO_DEPLOY_TOKENとPROJECT_NAMEをsecretに登録ください
