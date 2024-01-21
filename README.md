@@ -6,17 +6,19 @@ Deno Deployを使用する想定です。<br>
 # Setup
 1.このレポジトリをフォークします<br>
 2.Deno Deployで適当なProjectを作ります<br>
-3.ProjectのSettingのEnvironment Variablesに下記を登録します<br>
+3.ProjectのSettingのGit Integrationでフォークしたレポジトリのmainブランチを選び、Github Actionを選びLinkする<br>
+4.<a href="https://dash.deno.com/account#access-tokens">https://dash.deno.com/account#access-tokens</a>でアクセストークンを取得する<br>
+5.ProjectのSettingのEnvironment Variablesに下記を登録します<br>
 (a)BLUESKY_IDENTIFIER:Blueskyのハンドル<br>
 (b)BLUESKY_PASSWORD:BlueskyのハンドルのApp Password<br>
 (c)MISSKEY_SECRET:適当なランダム文字列を登録<br>
-4.ProjectのSettingのGit Integrationでフォークしたレポジトリのindex.tsにリンクする（もしフォークした時点でGitHub Actionが有効になっている場合は無効にしてください）<br>
-5.MisskeyのWebhookに<a href="https://DENOENVDOMAIN.deno.dev/post">https://DENOENVDOMAIN.deno.dev/post</a>（DENOENVDOMAIN.deno.devはProjectのドメイン）、シークレットに3-(c)と同じ値、Webhookを実行するタイミングに「ノートを投稿した時」のみにチェックを入れ、保存
+（d）DENO_DEPLOY_TOKEN：5で取得したもの<br>
+(e)PROJECT_NAME:2で作成したプロジェクト名<br>
+6.MisskeyのWebhookに<a href="https://DENOENVDOMAIN.deno.dev/post">https://DENOENVDOMAIN.deno.dev/post</a>（DENOENVDOMAIN.deno.devはProjectのドメイン）、シークレットに4-(c)と同じ値、Webhookを実行するタイミングに「ノートを投稿した時」のみにチェックを入れ、保存
 
 # KnownIssue
 - デプロイを行うと、直前の投稿が重複して登録されることがある
 - Misskeyのノートの本文がない場合にエラーになる
 
 # Automatic DeployとManual Deployデプロイ
-- Deno DeployのAutomatic DeployはDeno DeployのProjectが公開されるので、公開を希望されない方はManual Deployを使用してください
-- GitHub Actionのマニュアルデプロイを行う際は、DENO_DEPLOY_TOKENとPROJECT_NAMEをsecretに登録ください
+- Deno DeployのAutomatic Deployも利用可能です
