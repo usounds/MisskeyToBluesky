@@ -16,3 +16,6 @@ Deno Deployを使用する想定です。<br>
 # KnownIssue
 - デプロイを行うと、直前の投稿が重複して登録されることがある
 - Misskeyのノートの本文がない場合にエラーになる
+
+# デプロイ
+- GitHub Actionのマニュアルデプロイを行う際は、DENO_DEPLOY_TOKENとPROJECT_NAMEをsecretに登録ください
