@@ -1,1 +1,2 @@
 # MisskeyToBluesky
+MisskeyのWebhookからBlueskyに投稿をクロスポストします。
