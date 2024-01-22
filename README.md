@@ -1,7 +1,7 @@
 # MisskeyToBluesky
 MisskeyのWebhookを使用して、Blueskyに投稿をポストします。<br>
 Deno Deployを使用する想定です。<br>
-仕様上、Deno DeployのProjectのURLと、MisskeyのSecretの2つがセットで他人にバレるとBlueskyに自由に投稿できちゃいます。万が一バレた際は、MisskeyのSecretも別のものに変更してください。<br>
+仕様上、MisskeyのSecretが他人にバレるとBlueskyに自由に投稿できちゃいます。万が一バレた際は、MisskeyのSecretも別のものに変更してください。<br>
 
 # Setup
 1.このレポジトリをフォークします<br>
@@ -11,7 +11,7 @@ Deno Deployを使用する想定です。<br>
 5.ProjectのSettingのEnvironment Variablesに下記を登録します<br>
 (a)BLUESKY_IDENTIFIER:Blueskyのハンドル<br>
 (b)BLUESKY_PASSWORD:BlueskyのハンドルのApp Password<br>
-(c)MISSKEY_SECRET:適当なランダム文字列を登録<br>
+(c)MISSKEY_SECRET:適当なランダム文字列を自分で考えて登録。２０字文字程度の長い文字列を推奨します<br>
 (d)DENO_DEPLOY_TOKEN：4で取得したもの<br>
 (e)PROJECT_NAME:2で作成したプロジェクト名<br>
 6.MisskeyのWebhookに<a href="https://DENOENVDOMAIN.deno.dev/post">https://DENOENVDOMAIN.deno.dev/post</a>（DENOENVDOMAIN.deno.devはProjectのドメイン）、シークレットに4-(c)と同じ値、Webhookを実行するタイミングに「ノートを投稿した時」のみにチェックを入れ、保存
