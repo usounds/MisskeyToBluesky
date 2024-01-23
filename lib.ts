@@ -18,10 +18,12 @@ export const cont = {
         if(ctx.request.headers.get("x-misskey-hook-secret") !==  Deno.env.get("MISSKEY_SECRET")){
             ctx.response.status = 400
             ctx.response.body = 'invalid secret'
+            console.log('invalid secret')
         // Misskeyから投稿以外のWebhockが飛んできたらエラー
         }else if(body.type !== 'note'){
             ctx.response.status = 400
             ctx.response.body = 'invalid type. accept note only'
+            console.log('invalid type. accept note only')
 
         }else{
             // Bluesky認証
