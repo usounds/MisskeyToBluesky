@@ -1,7 +1,7 @@
 # MisskeyToBluesky
 MisskeyのWebhookを使用して、Blueskyに投稿をポストします。<br>
 Deno Deployを使用する想定です。<br>
-仕様上、MisskeyのSecretが他人にバレるとBlueskyに自由に投稿できちゃいます。万が一バレた際は、MisskeyのSecretも別のものに変更してください。<br>
+仕様上、MisskeyのSecretが他人にバレるとBlueskyに自由に投稿できちゃいます。万が一バレた際は、MisskeyのSecretを別のものに変更してください。<br>
 
 # Setup
 1.このレポジトリの右上の「Use this template」から自身に新しいレポジトリを作成します<br>
