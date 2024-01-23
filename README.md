@@ -18,5 +18,5 @@ Deno Deployを使用する想定です。<br>
 - Misskeyのノートの本文がない場合にエラーになる
 
 # その他
-- Deno DeployのManual Deployも利用可能です。
-- テンプレートから作ったレポジトリはPrivateでも良いようです
+- Deno DeployのManual Deployも利用可能です。デプロイ先のDeno Deployのプロジェクト名は、Secretに「PROJECT_NAME」で登録してください。（DENO_DEPLOY_TOKENも同様に必要となりますので、事前に取得ください）
+- テンプレートから作ったレポジトリはPrivateでもAutomatic Deployが使えるようです
